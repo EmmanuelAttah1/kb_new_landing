@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  body{
+    overflow-x: hidden;
+  }
+
+  .my-h1{
+    color:#363434;
+  }
+
+  /* Customize the scrollbar track */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Customize the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+/* Customize the scrollbar thumb when hovering */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
