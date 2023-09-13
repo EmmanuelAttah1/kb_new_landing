@@ -16,7 +16,8 @@ const form_template={
 
 const url = "https://numiattah.pythonanywhere.com/subscribe/"
 
-const image_url = "https://res.cloudinary.com/dtmsdunno/image/upload/v1694584524"
+const image_url = "https://res.cloudinary.com/dtmsdunno/image/upload/"
+
 
 
 export default function Home() {
@@ -107,7 +108,7 @@ export default function Home() {
         {contextHolder}
         <div className={styles.navContainer}>
             {/* <Image alt="turtles" src="/logo.png" /> */}
-            <img src = {`${image_url}/logo_qrvo08.png`} alt='Knowledge-base logo'/>
+            <img src = {`${image_url}v1694584524/logo_qrvo08.png`} alt='Knowledge-base logo'/>
             <nav>
                 <a className={styles.highlighted} href=''>Home</a>
                 <a href='#' onClick={goto_about}>About</a>
@@ -131,9 +132,9 @@ export default function Home() {
                     <button className={styles.primaryBtn} onClick={goto_waitlist}>Get Started</button>
                 </section>
                 <div className={styles.imageContainer}>
-                    <img className={styles.smallImageTop} src='/Images/brain.webp' />
-                    <img className={styles.mainImage} src='/Images/ai.webp' />
-                    <img className={styles.smallImageBottom} src='/Images/brain.webp' />
+                    <img className={styles.smallImageTop} src={`${image_url}v1694584550/brain_quhauv.webp`} />
+                    <img className={styles.mainImage} src={`${image_url}v1694584551/ai_sxagp9.webp`} />
+                    <img className={styles.smallImageBottom} src={`${image_url}v1694584550/brain_quhauv.webp`} />
                 </div>
             </div>
             <div className={styles.darkSection} ref={aboutRef}>
@@ -149,8 +150,8 @@ export default function Home() {
                 </div>
 
                 <div className={styles.box}>
-                    <img src='/Images/curve.svg' />
-                    <img className={styles.boxImg2} src='/Images/curve.svg' />
+                    <img src={`${image_url}v1694584550/curve_d9dr7g.svg`} />
+                    <img className={styles.boxImg2} src={`${image_url}v1694584550/curve_d9dr7g.svg`} />
                 </div>
             </div>
             <div className={styles.lightSection2}>
