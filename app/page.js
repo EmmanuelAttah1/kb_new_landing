@@ -4,6 +4,8 @@ import Form from '@/Lib/Form';
 import styles from './page.module.css';
 import { useState, useRef } from 'react';
 
+import Image from 'next/image';
+
 import { message } from 'antd';
 
 const form_template={
@@ -102,7 +104,8 @@ export default function Home() {
     <div>
         {contextHolder}
         <div className={styles.navContainer}>
-            <img src = "/Images/logo.png" alt='Knowledge-base logo'/>
+            <Image alt="turtles" src="/logo.png" />
+            {/* <img src = "/Images/logo.png" alt='Knowledge-base logo'/> */}
             <nav>
                 <a className={styles.highlighted} href=''>Home</a>
                 <a href='#' onClick={goto_about}>About</a>
