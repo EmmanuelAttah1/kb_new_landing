@@ -16,6 +16,8 @@ const form_template={
 
 const url = "https://numiattah.pythonanywhere.com/subscribe/"
 
+const image_url = "https://res.cloudinary.com/dtmsdunno/image/upload/v1694584524"
+
 
 export default function Home() {
   const waitlist = useRef()
@@ -104,8 +106,8 @@ export default function Home() {
     <div>
         {contextHolder}
         <div className={styles.navContainer}>
-            <Image alt="turtles" src="/logo.png" />
-            {/* <img src = "/Images/logo.png" alt='Knowledge-base logo'/> */}
+            {/* <Image alt="turtles" src="/logo.png" /> */}
+            <img src = {`${image_url}/logo_qrvo08.png`} alt='Knowledge-base logo'/>
             <nav>
                 <a className={styles.highlighted} href=''>Home</a>
                 <a href='#' onClick={goto_about}>About</a>
