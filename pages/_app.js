@@ -1,9 +1,6 @@
-import { AppProps } from "next/app";
 import Head from "next/head";
-import React, { useEffect } from "react";
-import "./styles.css";
+import React from "react";
 import Script from "next/script";
-import Router from "next/router";
 
 function CustomApp({ Component, pageProps, router }) {
   return (
