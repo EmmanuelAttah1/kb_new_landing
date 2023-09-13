@@ -14,6 +14,7 @@ const form_template={
 
 const url = "https://numiattah.pythonanywhere.com/subscribe/"
 
+
 export default function Home() {
   const waitlist = useRef()
   const contactRef = useRef()
