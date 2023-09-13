@@ -2,9 +2,9 @@
 
 import Form from '@/Lib/Form';
 import styles from './page.module.css';
-import { useState, useRef } from 'react';
+import { useState, useRef,useEffect } from 'react';
 
-import Image from 'next/image';
+import ReactGA from "react-ga4";
 
 import { message } from 'antd';
 
@@ -21,6 +21,10 @@ const image_url = "https://res.cloudinary.com/dtmsdunno/image/upload/"
 
 
 export default function Home() {
+  useEffect(()=>{
+    ReactGA.initialize("G-Q1JHZG4Z5F");
+  },[])
+
   const waitlist = useRef()
   const contactRef = useRef()
   const aboutRef = useRef()
