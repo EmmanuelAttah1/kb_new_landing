@@ -12,6 +12,8 @@ const form_template={
     email:""
 }
 
+const url = "https://numiattah.pythonanywhere.com/subscribe/"
+
 export default function Home() {
   const waitlist = useRef()
   const contactRef = useRef()
@@ -62,7 +64,7 @@ export default function Home() {
                 form.append("first_name",first_name)
                 form.append("last_name",last_name)
 
-                const res = await fetch("/api/subscribe", {
+                const res = await fetch(url, {
                 method: "POST",
                 body: form,
                 })
