@@ -23,8 +23,15 @@ const image_url = "https://res.cloudinary.com/dtmsdunno/image/upload/"
 
 
 export default function Home() {
+
+  const [myRootElement, setRootElement] = useState(null)
+
   useEffect(()=>{
     ReactGA.initialize("G-Q1JHZG4Z5F");
+    const rootElement = window.document.getElementsByTagName('html')[0];
+    if (rootElement) {
+        setRootElement(rootElement)
+    }
   },[])
 
   const waitlist = useRef()
@@ -146,7 +153,7 @@ export default function Home() {
                         * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
                         * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
                         */
-                        rootElement={document.getElementsByTagName('html')[0]}
+                        rootElement={myRootElement}
                         text="Book a demo"
                         textColor="#ffffff"
                         color="#00a2ff"
