@@ -76,6 +76,22 @@
     font-weight: 500;
     font-size: 15px;
     box-shadow: 3px 3px 0.5rem rgba(0, 0, 0, 0.217);
+    margin-right: 20px;
+}
+
+.primarySec{
+    margin-top: 30px;
+    background-color: transparent;
+    padding: 15px 30px;
+    border-radius: 10px;
+    color: #0e4e7b;
+    cursor: pointer;
+    transition: .2s;
+    border: 1px solid #0e4e7b;
+    font-weight: 500;
+    font-size: 15px;
+    box-shadow: 3px 3px 0.5rem rgba(0, 0, 0, 0.217);
+    margin-right: 20px;
 }
 
 
@@ -83,6 +99,12 @@
     border-color:  #0e4e7b;
     background-color: transparent;
     color:  #0e4e7b;
+}
+
+.primarySec:hover{
+    border-color:  transparent;
+    background-color: #0e4e7b;
+    color:  #ffffff;
 }
 
 .topSection{

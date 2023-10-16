@@ -8,6 +8,8 @@ import ReactGA from "react-ga4";
 
 import { message } from 'antd';
 
+import { PopupButton } from "react-calendly";
+
 const form_template={
     first_name:"",
     last_name:"",
@@ -107,8 +109,11 @@ export default function Home() {
             });
     }
   }
+
+  const rootRef = useRef()
+
   return (
-    <div>
+    <div ref={rootRef}>
         {contextHolder}
         <div className={styles.navContainer}>
             {/* <Image alt="turtles" src="/logo.png" /> */}
@@ -133,7 +138,21 @@ export default function Home() {
                         generates reports, and make managing your data 
                         Seamless and effortless.
                     </p>
-                    <button className={styles.primaryBtn} onClick={goto_waitlist}>Get Started</button>
+                    <div>
+                    <button className={styles.primaryBtn} onClick={goto_waitlist}>Join wait-list</button>
+                    <PopupButton
+                        url="https://calendly.com/kbdemo1/30min"
+                        /*
+                        * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
+                        * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
+                        */
+                        rootElement={document.getElementsByTagName('html')[0]}
+                        text="Book a demo"
+                        textColor="#ffffff"
+                        color="#00a2ff"
+                        className={styles.primarySec}
+                    />
+                    </div>
                 </section>
                 <div className={styles.imageContainer}>
                     <img className={styles.smallImageTop} src={`${image_url}v1694584550/brain_quhauv.webp`} />
